@@ -1,11 +1,14 @@
 import matplotlib.pyplot as pl
 from wordcloud import WordCloud, STOPWORDS
-import sys, os
-os.chdir(sys.path[0])
 
 # Read text
-text = open ('Trump.rtf', mode='r', encoding= 'utf-8').read()
+text = open ('reviews.rtf', mode='r', encoding= 'utf-8').read()
 stopwords = STOPWORDS
+
+# Add custom stopwords
+custom_stopwords = ["ordered"]  # Add your custom words here
+stopwords.update(custom_stopwords)
+
 
 wc = WordCloud (
     background_color='white',
