@@ -6,7 +6,7 @@ text = open ('reviews.rtf', mode='r', encoding= 'utf-8').read()
 stopwords = STOPWORDS
 
 # Add custom stopwords
-custom_stopwords = ["ordered"]  # Add your custom words here
+custom_stopwords = ["t", "s", "Movie","Time","Top", "Critic", "Top Critic","Many", "Full Review", "Full", "Barbie", "Review", "Original", "Score", "Film", "Jul", "Aug", "Spanish"]  # Add your custom words here
 stopwords.update(custom_stopwords)
 
 
